@@ -23,4 +23,8 @@ function setRotation (element, rotationRatio ){
 }
 
 setTime();
->>>>>>> Stashed changes
+
+
+
+
+

@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;
+
+}
+
 body{
     display: flex;
     justify-content: center;
@@ -13,13 +18,22 @@ body{
     background: #E4EBF5;
 }
 
+.creator{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #6d5dfc;
+    font-size: 1.5rem;
+}
+
 .clock{
     color: #6d5dfc;
-    box-shadow: 5px 5px 10px #c8d0e7, -10px -10px 20px rgba(255,255,255, 0.5), inset 3px 3px 15px #c8d0e7, inset -3px -3px 5px rgba(255,255,255, 0.3);
-    width: 300px;
-    height: 300px;
+    box-shadow: 0.5rem 0.5rem 1rem #c8d0e7, -1rem -1rem 2rem rgba(255,255,255, 0.5), inset 0.3rem 0.3rem 1.5rem #c8d0e7, inset -0.3rem 0.3rem 0.5rem rgba(255,255,255, 0.3);
+    width: 30rem;
+    height: 30rem;
     border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.52);
+    border: 0.5rem solid rgba(255, 255, 255, 0.52);
     position: relative;
     display: flex;
     justify-content: center;
@@ -28,13 +42,14 @@ body{
 
 .clock .number{
     --rotation:0;
-    padding: 10px;
+    padding: 1rem;
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
     /* background-color: red; */
     transform: rotate(var(--rotation));
+    font-size: 2rem;
 }
 
 .clock .one{ --rotation:30deg;
@@ -74,36 +89,49 @@ body{
     background-color: #6d5dfc;
     left: 50%;
     bottom: 50%;
-    width: 10px;
+    width: 1rem;
     height: 40%;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
     transform-origin: bottom;
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
     z-index: 10;
 }
 
 .clock .hour{
-    width: 10px;
-    height: 35%;
+    width: 1rem;
+    height: 30%;
 }
 
 .clock .minute{
-    width: 7px;
+    width: .7rem;
     height: 40%;
 }
 
 .clock .second{
-    width: 3px;
+    width: .3rem;
     height: 46%;
     background: rgba(255, 0, 0, 0.794);
 }
 
 .clock::after{
     content: '';
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background-color: #6d5dfc;
     z-index: 20;
+}
+
+
+@media all and (max-width:300px){
+    html{
+        font-size: 8px;
+    }
+    .clock{
+        width: 25rem;
+        height: 25rem;
+    }
+
+
 }
